@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <style>
             h1{
                 color:green;
@@ -8,7 +9,34 @@
             table, th, td{
                 border: solid 1px;
             }
+            .div-container{
+                /**margin: 0px;**/
+                display: flex;
+                flex-wrap: wrap;
+                background-color: brown;
+                /**grid-template-columns: 100px 100px auto;**/
+            }
+            .div-container > div{
+                background-color: blue;
+                border: solid 1px;
+                width: 300px;
+                margin: auto;
+            }
+            @media (min-width: 500px){
+                .div-container > div{
+                    width: 300px;
+                }
+            }
+            @media (max-width: 499px){
+                .div-container > div{
+                    width: 150px;
+                }
+            }
+            .div-container img{
+                width: 100%;
+            }
         </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Webpage 2</title>
     </head>
     <body>
@@ -32,5 +60,15 @@
             <td>tres</td>
         </tr>
         </table>
+        <div class="div-container">
+            <div><img src="img/mercury.jpg"></div>
+            <div><img src="img/may.jpg"></div>
+            <div><img src="img/taylor.jpg"></div>
+            <div><img src="img/deacon.jpg"></div>
+        </div>
+        <a href="1.html">1</a>
+        <a href="2.html">2</a>
+        <a href="3.html">3</a>
+        <a href="index.html">index</a>
     </body>
 </html>
